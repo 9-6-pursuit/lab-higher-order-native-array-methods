@@ -31,8 +31,6 @@ function getSongDetails(songs) {
   let result = songs.map(song => `${song.title} by ${song.artist}`)
   return result
   
-
-
 }
 
 
@@ -46,8 +44,10 @@ function getSongDetails(songs) {
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
 function getTitleAndArtist(songs) {
-  let result = songs.map(song => [song[title]] = song.artist)
-  return result
+  return songs.map(song => {
+    return {[song.title]: song.artist
+ }
+ })
 
 }
 
