@@ -27,7 +27,7 @@ function getSongsBySaib(songs) {
 function getSongsOverThreeMinutes(songs) {
 
   return songs.filter((song) => {
-    console.log("song.runtimeInSeconds: ==>",song.runimeInSeconds > 180)
+    // console.log("song.runtimeInSeconds: ==>",song.runimeInSeconds > 180)
     if (song.runimeInSeconds > 180) {
       return {song}
     }
