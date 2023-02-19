@@ -42,7 +42,7 @@ function getSongDetails(songs) {
 function getTitleAndArtist(songs) {
   return songs.map(song => {
     return {
-      [song.title: song.artist]
+      [song.title[song.artist]]: 
     }
   })
 }
