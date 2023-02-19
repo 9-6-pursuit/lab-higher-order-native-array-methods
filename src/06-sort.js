@@ -34,9 +34,10 @@ function sortByArtistNameDescending(songs) {
     let y = b.artist.toUpperCase();
     if (x < y) {
       return 1;
-    }
-    if (x > y) {
+    } else if (x > y) {
       return -1;
+    } else {
+      return 0;
     }
   });
 }
@@ -55,9 +56,10 @@ function sortBySongTitleAscending(songs) {
     let y = b.title.toUpperCase();
     if (x < y) {
       return -1;
-    }
-    if (x > y) {
+    } else if (x > y) {
       return 1;
+    } else {
+      return 0;
     }
   });
 }
