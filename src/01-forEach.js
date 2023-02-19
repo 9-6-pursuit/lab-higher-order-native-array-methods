@@ -12,7 +12,11 @@ const exampleSongData = require("../data/songs");
  * Logs out all of the song titles.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printAllSongTitles(songs) {}
+function printAllSongTitles(songs) {
+  return songs.forEach((song) => {
+    console.log(song.title)
+  })
+}
 
 /**
  * Logs out the song title and song artist.
@@ -24,13 +28,24 @@ function printAllSongTitles(songs) {}
  *  //> "Up by Sebastian Kamae"
  *  //> ...
  */
-function printSongDetails(songs) {}
+function printSongDetails(songs) {
+  songs.forEach((song, i) => {
+// need to add template literal here `${}`
+    console.log(`${song.title} by ${song.artist}`);
+  });
+}
 
 /**
  * Logs out all of the song titles which have a runtime over three minutes.
  * @param {Object[]} songs - An array of songs. See the song data for more.
  */
-function printSongTitlesOverThreeMinutes(songs) {}
+function printSongTitlesOverThreeMinutes(songs) {
+  //return use forEach w and if statement or teranary
+  songs.forEach((song) => {
+      song.runtimeInSeconds > 180
+    console.log(song.title)
+  });
+}
 
 module.exports = {
   printAllSongTitles,
