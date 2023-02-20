@@ -13,7 +13,17 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByRuntimeAscending(songs) {}
+
+function sortByRuntimeAscending(songs) {
+
+  return songs.slice().sort((a, b) => a.runtimeInSeconds - b.runtimeInSeconds);
+
+}
+
+
+
+
+
 
 /**
  * Reorders the array so that the song objects are organized by their artist name. The artist that comes last in the alphabet should come first.
@@ -23,7 +33,12 @@ function sortByRuntimeAscending(songs) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortByArtistNameDescending(songs) {}
+
+function sortByArtistNameDescending(songs) {
+  
+  return songs.sort((songA, songB) => {return songB.artist.toLowerCase().localeCompare(songA.artist.toLowerCase())});
+
+}
 
 /**
  * Reorders the array so that the song objects are organized by their song title. The title that comes first in the alphabet should come first.
@@ -33,7 +48,14 @@ function sortByArtistNameDescending(songs) {}
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {Object[]}
  */
-function sortBySongTitleAscending(songs) {}
+
+function sortBySongTitleAscending(songs) {
+
+  return songs.sort((songA, songB) => {return songA.title.toLowerCase().localeCompare(songB.title.toLowerCase())});
+
+}
+
+
 
 module.exports = {
   sortByRuntimeAscending,
