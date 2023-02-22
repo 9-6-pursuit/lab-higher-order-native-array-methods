@@ -6,6 +6,8 @@
   Keep in mind that your functions must still have and use a parameter for accepting all songs.
 */
 const exampleSongData = require("../data/songs");
+const { getSongTitles } = require("./02-map");
+
 // Do not change the line above.
 
 /**
@@ -13,7 +15,12 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {string[]} An array of strings, all of which are song titles.
  */
-function getSongTitles(songs) {}
+function getSongTitles(songs) {
+  let exampleSongData = songs.map((song) => {
+  return [song.title ];
+});
+}
+
 
 /**
  * Returns an array of all of the song titles with the artist.
